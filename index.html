@@ -1,0 +1,401 @@
+<html>
+    <head>
+        <title>WebTimer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+
+
+        $(document).ready(function(){
+            var c=0;
+            
+            $("#sc").click(function(){
+
+               
+                if(c==0){
+
+                    $("#d").css("display", "none");
+                    $("#n").css("display", "block");
+                     $("#n").animate(
+    { deg: 180 },
+    {
+      duration: 300,
+      step: function(now) {
+        $(this).css({ transform: 'rotate(' + now + 'deg)' });
+      }
+    }
+  );
+ 
+                    $("#dn").animate({"position": "absolute","right":"0%"},400,'swing');
+                    setTimeout(() => {
+                        $("#dn").css("background-color","#110f12");
+        
+    }, 100);
+                    // $("#dn").css("background-color","#110f12");
+                    $("#b").css("background-color","#1579ff");
+                    $("#st").css("background-color","#110f12");
+                    $("#in").css("color","#00e7b5");
+                    $("#it1").css({"border": "2px solid #1579ff","background-color": "#110f12"});
+                    $("#ot1").css({"border": "2px solid #1579ff","background-color": "#110f12"});
+                    $("#ot2").css({"border": "2px solid #1579ff","background-color": "#110f12"});
+                    $("#ot3").css({"border": "2px solid #1579ff","background-color": "#110f12"});
+                    $("#wt").css({"border": "2px solid #110f12","background-color": "#110f12","color": "#00e7b5"});
+                    c=1;
+                    // *Night mode code
+
+                }
+                else
+                {
+                    $("#n").css("display", "none");
+        $("#d").css("display", "block");
+                    $("#d").animate(
+    { deg: 0 },
+    {
+      duration: 200,
+      step: function(now) {
+        $(this).css({ transform: 'rotate(' + now + 'deg)' });
+      }
+    }
+  );
+                    $("#dn").animate({"position": "absolute","right":"50%","background-color":"rgb(8, 117, 219)"},300,'swing');
+                    setTimeout(() => {
+                        $("#dn").css("background-color","rgb(8, 117, 219)");
+        
+    }, 100);
+    setTimeout(() => {
+                        $("#d").css("deg", "0");
+        
+    }, 400);
+    
+                    $("#b").css("background-color","rgb(8, 117, 219)");
+                    $("#st").css("background-color","white");
+                    $("#in").css("color","rgb(8, 117, 219)");
+                    $("#it1").css({"border": "2px solid #1579ff","background-color": "rgb(8, 117, 219)"});
+                    $("#ot1").css({"border": "2px solid #1579ff","background-color": "rgb(8, 117, 219)"});
+                    $("#ot2").css({"border": "2px solid #1579ff","background-color": "rgb(8, 117, 219)"});
+                    $("#ot3").css({"border": "2px solid #1579ff","background-color": "rgb(8, 117, 219)"});
+                    $("#wt").css({"border": "2px solid #1579ff","background-color": "rgb(8, 117, 219)","color": "white"});
+                    c=0;
+                    // *Normal mode code
+                }
+            });
+
+
+  $("#st").click(function(){
+    $("#introText").animate({"position": "relative","top":"20%","right":"100%","height":"0%","width":"64%","border-radius": "100%"});
+      $("#in").hide() ;
+    $(this).animate({"position": "relative","top":"20%","right":"100%","height":"0%","width":"64%","border-radius": "100%"});
+    $(this).animate({"position": "relative","top":"-5%","right":"0%","height":"99%","width":"99%","border-radius": "0%","border" : "0px"},"slow");
+    setTimeout(() => {
+        if(c==1){
+        $("#b").css("background-color","#110f12");
+        console.log(c);
+        }
+        else if(c==0){
+            $("#b").css("background-color","white");
+            console.log(c);
+        }
+    }, 1000);
+    
+    setTimeout(() => {
+        $("#it1").css("display","block");
+        $("#it1").animate({"position": "absolute","right":"5%"},1100,'swing');
+        
+    }, 1100);
+    setTimeout(() => {
+        $("#wt").css("display","block");
+        $("#wt").animate({"position": "absolute","right":"5%"},1200,'swing');
+        
+    }, 1100);
+    setTimeout(() => {
+        $("#ot1").css("display","block");
+        $("#ot1").animate({"position": "absolute","right":"5%"},1500,'swing');
+        
+    }, 1250);
+    setTimeout(() => {
+        $("#ot2").css("display","block");
+        $("#ot2").animate({"position": "absolute","right":"5%"},1700,'swing');
+        
+    }, 1350);
+    setTimeout(() => {
+        $("#ot3").css("display","block");
+        $("#ot3").animate({"position": "absolute","right":"5%"},1900,'swing');
+        
+    }, 1450);
+  });
+
+
+  $("#ot2").click(function(){
+    $("#ot2").css("box-shadow","none");
+      console.log("kjfhkdjs")
+      $("#it1").text("It's Smiling!");
+
+
+      $("#wt").text("So,");
+      $("#wt").css("top","37%")
+      $("#ot1").css("font-size","10vw");
+      $("#ot1").text("Always Keep Smiling");
+      $("#ot2").text("HAPPY BIRTH DAY!");
+      $("#ot2").css("font-size","14vw"); 
+      $("#ot2").css("font-weight","900");
+      $("#ot2").css("color","#5e64d6");
+     
+      setTimeout(() => {
+        $("#Popper").css("display","block")
+        
+    }, 6100);
+
+      setTimeout(() => {
+        $("#data").css("display","block");
+        
+    }, 7000);
+
+    });
+ 
+
+        });
+
+
+
+        </script>
+
+
+
+
+        <style>
+            .round-button {
+	width:25%;
+}
+             #st {
+                position: relative;
+                top : 45%;
+                right:-20%;
+                width: 55%;
+	            height:0%;
+	            padding-bottom: 58%;
+                border-radius: 50%;
+                
+                border: 2px solid  rgb(8, 117, 219) ;
+                 color:rgb(8, 117, 219) ;
+                font-size: 15vw;
+                text-align: center;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+                #in{
+                    position: absolute;
+                    top : 0%;
+                    right: 30%;
+                    margin-top: 23%;
+                    margin-left: 45%;
+                    font-size:70%;
+                }
+            #b{
+                background-color:white;  
+                font-family: "Comic Sans MS", cursive, sans-serif;
+                background-image: url("background.png");
+                background-size: 100% 100%;
+ 
+            } 
+            
+            #it1,#ot1,#ot2,#ot3,#wt{
+                position: absolute;
+                color:white;
+                font-size: 20px;
+                text-align: center;
+                display: none;
+            }
+            #it1{
+                position: absolute;
+                height: 12%;
+                width: 90%;
+                top :25%;
+                right: 95%;
+                font-weight:900;
+                font-size: 10vw;
+                text-align: center;
+                border-radius: 5px;
+                color: #dc00f0;
+            }
+            #wt{
+                position: absolute;
+                height: 12%;
+                width: 90%;
+                top :32%;
+                right: 95%;
+                color: #5e64d6;
+                font-weight:600;
+                border-radius: 5px;
+                font-size: 34px;
+            }
+            #ot1{
+                position: absolute;
+                height: 20%;
+                width: 90%;
+                top :42%;
+                right: 95%;
+                font-weight:600;
+                color: #dc00f0;
+                border-radius: 5px;
+            }
+            #ot2{
+                position: absolute;
+                height: 12%;
+                width: 90%;
+                top :60%;
+                right: 95%;
+                color:rgb(8, 117, 219);
+                font-size: 8vw;
+                border-radius: 5px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            
+            #sc{
+                position: relative;
+                height:0%;
+                width:20%;
+                top : 15%;
+                right:-70%;
+                background-color:white;
+                border: 2px solid  rgb(178, 190, 201);
+                color :#00e7b5;
+                text-align: center;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                padding-bottom: 10%;
+                border-radius: 100px;
+            }
+            #dn{
+                position: absolute;
+                width: 50%;
+	            height:0%;
+                top : 0%;
+                right:50%;
+                background-color:rgb(8, 117, 219);
+                padding-bottom: 50%;
+                border-radius: 50%;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            #d{
+                position: absolute;
+                top :-80%;
+                right:25%;
+                font-size: 7vw;
+                color:white;
+                text-align: center;
+            }
+            #n{
+                position: absolute;
+                top :-80%;
+                right:25%;
+                font-size: 7vw;
+                display: none;
+                text-align: center;
+            }
+            #introText{
+                position: absolute;
+                top: 20%;
+                font-size: 10vw;
+                color: #dc00f0;
+                font-weight:900;
+                text-align: center;
+            }
+            #data{
+                display: none;
+            }
+            #data1{
+                position: absolute;
+                top: 20%;
+                right:25%;
+            }
+            #data2{
+                position: absolute;
+                top: 10%;
+                right:90%;
+            }
+
+            #data3{
+                position: absolute;
+                top: 35%;
+                right:55%;
+            }
+            #data4{
+                position: absolute;
+                top: 55%;    
+            }
+
+            #data5{
+                position: absolute;
+                top: 0%;  
+                right:90%;  
+            }
+
+            #data6{
+                position: absolute;
+                top: 55%;  
+                right:85%; 
+                background-color: #00e7b5; 
+            }
+            #data7{
+                position: absolute;
+                top: 0%;  
+                right:95%;  
+            }
+            #Popper{
+                position: absolute;
+                top: 55%;  
+                right:90%;
+                height:40%;
+                width: 40%;
+                display: none;
+            }
+           
+        </style>
+    </head>
+    <body id="b" ba>
+        <div id="introText" >
+            Hey Noodles, It's your Birthday!
+        </div>
+
+       
+        <div id="data" >
+            <img id="data1" src="6k2.gif">   
+            <img id="data2" src="6k2.gif">   
+            <img id="data3" src="6k2.gif">   
+            <img id="data4" src="6k2.gif">   
+        </div> 
+        <div id="data" >
+            <img id="data5" src="6k2.gif">   
+            <img id="data6" src="6k2.gif">   
+            <img id="data7" src="6k2.gif">   
+            <img id="data8" src="6k2.gif">   
+        </div> 
+        
+        <div id="Popper" >
+            <img id="PopperL" src="giphy.gif">    
+        </div>
+
+        <div id="st">
+           
+          <p id="in">Click Here</p>
+           
+          <diV id="it1">   
+            Hi Manav 
+        </diV>
+        <diV id="wt">It's Elavarasan</diV>
+        <diV id="ot1"> 
+           Do you know the meaning of your name?
+        </diV>  
+        <diV id="ot2">
+           Click Here to see the meaning
+        </diV>
+       
+       
+
+        </div>
+    
+         <!-- In Time :<p id="t"></p><br><br>
+        Out Time 1 : <p id="t1"></p><br><br>
+        Out Time 2 : <p id="t2"></p><br><br>
+        Out Time 3 : <p id="t3"></p>  -->
+        
+    </body>
+ </html>
